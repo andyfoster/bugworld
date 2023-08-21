@@ -2,8 +2,8 @@ package net.andyfoster.bugworld;
 
 public class Bug {
 
-	private String name;
 	private String species;
+	private String name;
 	private char symbol;
 	private int x;
 	private int y;
@@ -12,8 +12,8 @@ public class Bug {
 
 	public Bug() {
 		super();
-		this.name = "Gary";
 		this.species = "Weta";
+		this.name = "Gary";
 		this.symbol = 'G';
 		this.x = 100;
 		this.y = 120;
@@ -27,18 +27,8 @@ public class Bug {
 	}
 
 	public String toText() {
-
-		StringBuilder sb = new StringBuilder();
-
-		sb.append("Name: " + this.name + "\n");
-		sb.append("Species: " + this.species + "\n");
-		sb.append("Symbol: " + this.name + "\n");
-		sb.append("X: " + this.x + "\n");
-		sb.append("Y: " + this.y + "\n");
-		sb.append("Energy: " + this.energy + "\n");
-		sb.append("ID (unique): " + this.id + "\n");
-
-		return sb.toString();
+		return this.species + this.name + " " + this.symbol + " " + this.x + " " + this.y + " " + this.energy + " "
+				+ this.id;
 	}
 
 	public String getSpecies() {
@@ -97,7 +87,7 @@ public class Bug {
 		this.id = id;
 	}
 
-	public Bug(String name, String species, char symbol, int x, int y, int energy, int id) {
+	public Bug(String species, String name, char symbol, int x, int y, int energy, int id) {
 		super();
 		this.species = species;
 		this.name = name;
