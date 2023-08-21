@@ -4,8 +4,9 @@ public class Test {
 
 	public static void main(String[] args) {
 
-		b1name = b1.getName();
-		system.out.println(b1name);
+		Bug b1 = new Bug();
+		String b1name = b1.getName();
+		System.out.println(b1name);
 		b1.toString();
 
 	}
