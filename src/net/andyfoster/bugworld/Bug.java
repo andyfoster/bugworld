@@ -21,6 +21,16 @@ public class Bug {
 		this.id = 1;
 	}
 
+	@Override
+	public String toString() {
+		return this.name + " " + " the " + this.species;
+	}
+
+	public String toText() {
+		return this.species + this.name + " " + this.symbol + " " + this.x + " " + this.y + " " + this.energy + " "
+				+ this.id;
+	}
+
 	public String getSpecies() {
 		return species;
 	}
