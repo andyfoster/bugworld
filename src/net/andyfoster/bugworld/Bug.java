@@ -14,7 +14,7 @@ public class Bug {
 		super();
 		this.species = "Weta";
 		this.name = "Gary";
-		this.symbol = a;
+		this.symbol = 'G';
 		this.x = 100;
 		this.y = 120;
 		this.energy = 300;
