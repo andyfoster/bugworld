@@ -10,6 +10,17 @@ public class Bug {
 	private int energy;
 	private int id;
 
+	public Bug(String species, String name, char symbol, int x, int y, int energy, int id) {
+		super();
+		this.species = species;
+		this.name = name;
+		this.symbol = symbol;
+		this.x = x;
+		this.y = y;
+		this.energy = energy;
+		this.id = id;
+	}
+
 	public Bug() {
 		super();
 		this.species = "Weta";
@@ -84,17 +95,6 @@ public class Bug {
 	}
 
 	public void setId(int id) {
-		this.id = id;
-	}
-
-	public Bug(String species, String name, char symbol, int x, int y, int energy, int id) {
-		super();
-		this.species = species;
-		this.name = name;
-		this.symbol = symbol;
-		this.x = x;
-		this.y = y;
-		this.energy = energy;
 		this.id = id;
 	}
 
