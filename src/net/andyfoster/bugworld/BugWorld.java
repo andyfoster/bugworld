@@ -1,5 +1,7 @@
 package net.andyfoster.bugworld;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class BugWorld {
@@ -24,5 +26,16 @@ public class BugWorld {
 		Bug b3 = new Bug("Bertie", "Bee", 'B', x, y, energy, 100);
 
 		System.out.println(b3.toText());
+
+		List<Bug> bugs = new ArrayList<Bug>();
+
+		bugs.add(b1);
+		bugs.add(b2);
+		bugs.add(b3);
+
+		for (Bug b : bugs) {
+			b.toText();
+		}
+
 	}
 }
