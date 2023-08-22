@@ -32,6 +32,32 @@ public class Bug {
 		this.id = 1;
 	}
 
+	public void move(String direction) {
+		this.move(direction, 1);
+	}
+
+	public void move(String direction, int amount) {
+
+		switch (direction) {
+		case "N" -> {
+			this.setY(this.getY() - amount);
+		}
+		case "S" -> {
+			this.setY(this.getY() + amount);
+		}
+		case "E" -> {
+			this.setY(this.getX() - amount);
+		}
+		case "W" -> {
+			this.setY(this.getX() + amount);
+		}
+		default -> {
+			throw new IllegalArgumentException("Unexpected value: " + direction);
+		}
+		}
+
+	}
+
 	@Override
 	public String toString() {
 		return this.name + " the " + this.species;
