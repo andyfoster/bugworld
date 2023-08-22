@@ -64,15 +64,13 @@ public class Bug {
 	}
 
 	public String toText() {
-		StringBuilder sb = new StringBuilder();
-		sb.append("Name: " + this.name + "\n");
-		sb.append("Species: " + this.species + "\n");
-		sb.append("Symbol: " + this.symbol + "\n");
-		sb.append("X: " + this.x + "\n");
-		sb.append("Y: " + this.y + "\n");
-		sb.append("Energy: " + this.energy + "\n");
 
-		return sb.toString();
+		return "Name: " + this.name + "\n" +
+				"Species: " + this.species + "\n" +
+				"Symbol: " + this.symbol + "\n" +
+				"X: " + this.x + "\n" +
+				"Y: " + this.y + "\n" +
+				"Energy: " + this.energy + "\n";
 	}
 
 	public String getSpecies() {
