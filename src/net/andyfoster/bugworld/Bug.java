@@ -10,10 +10,10 @@ public class Bug {
 	private int energy;
 	private int id;
 
-	public Bug(String species, String name, char symbol, int x, int y, int energy, int id) {
+	public Bug(String name, String species, char symbol, int x, int y, int energy, int id) {
 		super();
-		this.species = species;
 		this.name = name;
+		this.species = species;
 		this.symbol = symbol;
 		this.x = x;
 		this.y = y;
@@ -34,12 +34,19 @@ public class Bug {
 
 	@Override
 	public String toString() {
-		return this.name + " " + " the " + this.species;
+		return this.name + " the " + this.species;
 	}
 
 	public String toText() {
-		return this.species + this.name + " " + this.symbol + " " + this.x + " " + this.y + " " + this.energy + " "
-				+ this.id;
+		StringBuilder sb = new StringBuilder();
+		sb.append("Name: " + this.name + "\n");
+		sb.append("Species: " + this.species + "\n");
+		sb.append("Symbol: " + this.symbol + "\n");
+		sb.append("X: " + this.x + "\n");
+		sb.append("Y: " + this.y + "\n");
+		sb.append("Energy: " + this.energy + "\n");
+
+		return sb.toString();
 	}
 
 	public String getSpecies() {
