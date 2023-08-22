@@ -1,5 +1,7 @@
 package net.andyfoster.bugworld;
 
+import java.util.Scanner;
+
 public class Test {
 
 	private String b1name;
@@ -8,6 +10,7 @@ public class Test {
 	// the constructor test is used to call
 	public Test() {
 		this.testOne();
+		this.testTwo();
 
 	}
 
@@ -29,6 +32,24 @@ public class Test {
 		Bug b2 = new Bug("Human", "Rosie", 'R', 10, 10, 100, 100);
 		System.out.println(b2);
 		System.out.println(b2.toText());
+	}
+
+	public void testTwo() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("x: ");
+		if (sc.hasNextInt()) {
+			System.out.println("Scanner is reading");
+		}
+
+		int x = sc.nextInt();
+		System.out.print("y ");
+		int y = sc.nextInt();
+		System.out.print("energy: ");
+		int energy = sc.nextInt();
+
+		Bug b3 = new Bug("Bertie", "Bee", 'B', x, y, energy, 100);
+		System.out.println(b3.toText());
+		sc.close();
 	}
 
 }
