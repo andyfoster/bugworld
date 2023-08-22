@@ -8,6 +8,9 @@ public class BugWorld {
 	public static void main(String[] args) {
 		System.out.println("Welcome to BugWorld!");
 
+		World w = new World();
+		w.drawWorld();
+
 		Bug b1 = new Bug();
 		Bug b2 = new Bug("Barry", "Beetle", 'B', 100, 100, 23, 4);
 
