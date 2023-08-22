@@ -11,13 +11,13 @@
 
 - [x] Task 4: Create a "move" method in Bug that can move the bug in one of the the four directions on a compass (N, S, E, W). At this point there is no concept of the size of the world, so it is ok to be in position x=-1 and y=-1.
 
-- [ ] Task 5: Create a test where one bug moves 100 times in random directions (using Math.random()).
+- [x] Task 5: Create a test where one bug moves 100 times in random directions (using Math.random()).
 
 ## Bug World 2
 
-- [ ] Create a class World that stores an unspecified number of bugs in a 2D world. The bugs must be stored in an ArrayList. The world must have attributes height and width that denote the size of the world.
+- [x] Create a class World that stores an unspecified number of bugs in a 2D world. The bugs must be stored in an ArrayList. The world must have attributes height and width that denote the size of the world.
 
-- [ ] Create appropriate constructors for the world that all initialise a world with bugs in positions that are inside the world's height and width.
+- [x] Create appropriate constructors for the world that all iniialise a world with bugs in positions that are inside the world's height and width.
 
 - [ ] Create a drawWorld method. Use the symbol of each bug to show where the bug is in the world. Print the world as text in the format below:
 
