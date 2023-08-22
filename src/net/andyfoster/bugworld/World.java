@@ -13,11 +13,29 @@ public class World {
 
 		bugs.add(new Bug("Steve", "Spider", 'S', 20, 40, 30, 1));
 		bugs.add(new Bug("Charles", "Cockroach", 'C', 30, 50, 30, 2));
-
 	}
 
-	public static void main(String[] args) {
+	public void drawWorld() {
 
+		System.out.println("|-----------------------------|");
+
+		// Logic to work out where to put bugs
+
+		StringBuilder sb = new StringBuilder();
+//
+		for (int i = 0; i < height; i++) {
+			for (Bug b : bugs) {
+				if (b.getY() == i) {
+					sb.append(b.getSymbol());
+				} else {
+					sb.append(" ");
+				}
+			}
+			sb.append("\n");
+		}
+
+		System.out.println("|                             |");
+		System.out.println("|-----------------------------|");
 	}
 
 }
