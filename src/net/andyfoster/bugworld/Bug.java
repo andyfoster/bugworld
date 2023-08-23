@@ -36,6 +36,12 @@ public class Bug {
         this.move(direction, 1);
     }
 
+    public int compareTo(Bug b) {
+//        return Integer.compare(this.energy, b.energy);
+        
+        return this.energy - b.energy;
+    }
+
     public void move(String direction, int amount) {
 
 
