@@ -47,24 +47,24 @@ public class Bug {
 
         switch (direction) {
             case "N" -> {
-                System.out.println("Moving North" + amount + " spaces");
-                System.out.println(this.getY());
+//                System.out.println("Moving North" + amount + " spaces");
+//                System.out.println(this.getY());
 
 
                 this.setY(this.getY() - amount);
             }
             case "S" -> {
-                System.out.println("Moving South" + amount + " spaces");
+//                System.out.println("Moving South" + amount + " spaces");
 
                 this.setY(this.getY() + amount);
             }
             case "E" -> {
-                System.out.println("Moving east" + amount + " spaces");
+//                System.out.println("Moving east" + amount + " spaces");
 
                 this.setX(this.getX() + amount);
             }
             case "W" -> {
-                System.out.println("Moving West" + amount + " spaces");
+//                System.out.println("Moving West" + amount + " spaces");
 
                 this.setX(this.getX() - amount);
             }
