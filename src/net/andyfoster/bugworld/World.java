@@ -4,38 +4,38 @@ import java.util.ArrayList;
 
 public class World {
 
-	private ArrayList<Bug> bugs;
-	private int height = 100;
-	private int width = 100;
+    private final ArrayList<Bug> bugs;
+    private final int height = 10;
+    private final int width = 10;
 
-	public World() {
-		bugs = new ArrayList<>();
+    public World() {
+        bugs = new ArrayList<>();
 
-		bugs.add(new Bug("Steve", "Spider", 'S', 20, 40, 30, 1));
-		bugs.add(new Bug("Charles", "Cockroach", 'C', 30, 50, 30, 2));
-	}
+        bugs.add(new Bug("Steve", "Spider", 'S', 5, 4, 30, 1));
+        bugs.add(new Bug("Charles", "Cockroach", 'C', 3, 9, 30, 2));
+    }
 
-	public void drawWorld() {
+    public void drawWorld() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("|--------------------|\n");
 
-		System.out.println("|-----------------------------|");
+        for (int y = 0; y < height; y++) {
 
-		// Logic to work out where to put bugs
+            sb.append("|");
+            for (int x = 0; x < width; x++) {
+                for (Bug b : bugs) {
+                    if (b.getX() == x && b.getY() == y) {
+                        sb.append(b.getSymbol());
+                    } else {
+                        sb.append(" ");
+                    }
+                }
+            }
+            sb.append("|\n");
+        }
+        sb.append("|--------------------|");
+        System.out.println(sb);
 
-		StringBuilder sb = new StringBuilder();
-//
-		for (int i = 0; i < height; i++) {
-			for (Bug b : bugs) {
-				if (b.getY() == i) {
-					sb.append(b.getSymbol());
-				} else {
-					sb.append(" ");
-				}
-			}
-			sb.append("\n");
-		}
-
-		System.out.println("|                             |");
-		System.out.println("|-----------------------------|");
-	}
+    }
 
 }

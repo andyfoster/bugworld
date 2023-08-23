@@ -5,14 +5,14 @@ import java.util.List;
 
 public class BugWorld {
 
-	public static void main(String[] args) {
-		System.out.println("Welcome to BugWorld!");
+    public static void main(String[] args) {
+        System.out.println("Welcome to BugWorld!");
 
-		World w = new World();
-		w.drawWorld();
+        World w = new World();
+        w.drawWorld();
 
-		Bug b1 = new Bug();
-		Bug b2 = new Bug("Barry", "Beetle", 'B', 100, 100, 23, 4);
+        Bug b1 = new Bug();
+        Bug b2 = new Bug("Barry", "Beetle", 'B', 100, 100, 23, 4);
 
 //		System.out.println(b1.toString());
 //		System.out.println(b2.toString());
@@ -27,26 +27,26 @@ public class BugWorld {
 
 //		Bug b3 = new Bug("Bertie", "Bee", 'B', x, y, energy, 100);
 
-		Spider b4 = new Spider();
-		b4.setName("Sam");
+        Spider b4 = new Spider();
+        b4.setName("Sam");
 
 //		System.out.println(b3.toText());
 
-		List<Bug> bugs = new ArrayList<>();
+        List<Bug> bugs = new ArrayList<>();
 
-		bugs.add(b1);
-		bugs.add(b2);
+        bugs.add(b1);
+        bugs.add(b2);
 //		bugs.add(b3);
-		bugs.add(b4);
+        bugs.add(b4);
 
-		for (Bug b : bugs) {
-			System.out.println(b.toText());
-		}
+        for (Bug b : bugs) {
+//			System.out.println(b.toText());
+        }
 
-		b1.move("N");
-		b1.move("N", 5);
+        b1.move("N");
+        b1.move("N", 5);
 
-		System.out.println(b1.toText());
+//		System.out.println(b1.toText());
 
-	}
+    }
 }
