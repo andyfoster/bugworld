@@ -1,6 +1,6 @@
 package net.andyfoster.bugworld;
 
-public class Bug {
+public class Bug extends GameObject implements Comparable<Bug>
 
     private String species;
     private String name;
@@ -38,7 +38,7 @@ public class Bug {
 
     public int compareTo(Bug b) {
 //        return Integer.compare(this.energy, b.energy);
-        
+
         return this.energy - b.energy;
     }
 

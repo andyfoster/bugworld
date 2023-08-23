@@ -1,6 +1,6 @@
 package net.andyfoster.bugworld;
 
-public class Plant {
+public class Plant implements GameObject {
     private final int x;
     private final int y;
     private int size;
