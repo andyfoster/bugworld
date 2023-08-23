@@ -38,18 +38,29 @@ public class Bug {
 
     public void move(String direction, int amount) {
 
+
         switch (direction) {
             case "N" -> {
+                System.out.println("Moving North" + amount + " spaces");
+                System.out.println(this.getY());
+
+
                 this.setY(this.getY() - amount);
             }
             case "S" -> {
+                System.out.println("Moving South" + amount + " spaces");
+
                 this.setY(this.getY() + amount);
             }
             case "E" -> {
-                this.setY(this.getX() - amount);
+                System.out.println("Moving east" + amount + " spaces");
+
+                this.setX(this.getX() + amount);
             }
             case "W" -> {
-                this.setY(this.getX() + amount);
+                System.out.println("Moving West" + amount + " spaces");
+
+                this.setX(this.getX() - amount);
             }
             default -> {
                 throw new IllegalArgumentException("Unexpected value: " + direction);
