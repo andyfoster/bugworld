@@ -6,6 +6,7 @@ public class World {
 
     private final ArrayList<Bug> bugs;
     private final ArrayList<Obstacle> obstacles;
+    private final ArrayList<Plant> plants;
     private final int height = 10;
     private final int width = 10;
 
@@ -18,6 +19,28 @@ public class World {
         obstacles = new ArrayList<>();
         obstacles.add(new Obstacle("Rock", 'R', 2, 2));
         obstacles.add(new Obstacle("Leaf", 'L', 5, 5));
+
+        plants = new ArrayList<>();
+        plants.add(new Plant(10, 4, 5));
+    }
+
+    public GameObject objectAtXY(int x, int y) {
+        for (Bug b : bugs) {
+            if (b.getX() == x && b.getY() == y) {
+                return b;
+            }
+        }
+        for (Obstacle o : obstacles) {
+            if (o.getX() == x && o.getY() == y) {
+                return o;
+            }
+        }
+        for (Plant p : plants) {
+            if (p.getX() == x && p.getY() == y) {
+                return p;
+            }
+        }
+        return null;
     }
 
     public void drawWorld() {
