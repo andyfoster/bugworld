@@ -15,8 +15,28 @@ public class Plant implements GameObject {
         return x;
     }
 
+    @Override
+    public void setX(int x) {
+        
+    }
+
     public int getY() {
         return y;
+    }
+
+    @Override
+    public void setY(int y) {
+
+    }
+
+    @Override
+    public char getSymbol() {
+        return 0;
+    }
+
+    @Override
+    public void setSymbol(char symbol) {
+
     }
 
     public int getSize() {
