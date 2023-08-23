@@ -1,6 +1,6 @@
 package net.andyfoster.bugworld;
 
-public class Bug extends GameObject implements Comparable<Bug>
+public class Bug extends GameObject implements Comparable<Bug> {
 
     private String species;
     private String name;
